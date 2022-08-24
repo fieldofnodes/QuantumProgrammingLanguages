@@ -1,3 +1,10 @@
+using Pkg
+Pkg.activate(".")
+using Random
+using Distributions
+using CairoMakie
+
+
 
 function firstdigit(x::Integer)
     iszero(x) && return x
@@ -17,6 +24,14 @@ function benford(ns)
 mrandn(n,m) = m .* randn(n)
 mrandp(n,λ,m) = m .* rand(Poisson(λ),n)
 trunc_int(x) = trunc.(Int, abs.(x))
+
+Exponential(θ)
+Gamma(α,θ)
+LogitNormal(μ,σ)
+
+
+fieldnames(Gamma)
+
 
 
 n = 10^6
